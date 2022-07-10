@@ -1,5 +1,53 @@
 <div class="container" style="padding-top: 120px;">
     <h3>Contactenos</h3>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam illo similique, omnis quia optio in accusamus error eveniet voluptatem, eius hic nobis! Dolores facere eaque eveniet voluptatum qui temporibus. Quidem?    </p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore doloremque tempore ipsa ipsam dolor praesentium recusandae porro cum amet obcaecati voluptates, laudantium soluta consequatur expedita quisquam necessitatibus est quae quam?
+    </p>
+    <div class="row">
+        <div class="col-4">
+            <form [formGroup]="contactusForm" method="post" autocomplete="off">
+                <div formGroupName="persona">
+                    <div class="form-group">
+                        <input type="text" formControlName="nombre" class="form-control" placeholder="Ingrese nombres">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="apellido" class="form-control" placeholder="Ingrese apellidos">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="email" formControlName="email" class="form-control" placeholder="Ingrese email">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" formControlName="mensaje" placeholder="Ingrese mensaje" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <button (click)="__onSubmit()" class="btn btn-primary">Enviar</button>
+                </div>
+                <!-- <p>
+                    Datos del formulario: {{ contactusForm.value | json }}
+                </p> -->
+                <!-- <p>
+                    Validacion de Formulario: {{ contactusForm.valid }}
+                </p> -->
+            </form>
+        </div>
+        <div class="col-8">
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1182607034298!2d-76.96738667538202!3d-12.104055718831216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c70ab77498c1%3A0xcce9f50642e7c684!2sUniversidad%20Peruana%20de%20Ciencias%20Aplicadas!5e0!3m2!1ses-419!2spe!4v1653961633016!5m2!1ses-419!2spe" width="700" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <span><b>Telefono 1: </b></span>
+                    ###-###-####
+                    <br>
+                    <span><b>Telefono 2: </b></span>
+                    ###-###-####
+                </div>
+                <div>
+                    <b>Direccion: </b>
+                    Prolongación Primavera 2390, Lima 15023
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
