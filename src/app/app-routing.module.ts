@@ -10,6 +10,7 @@ const routes: Routes = [
     { path: 'aboutus', component:AboutusComponent},
     { path: 'contactus', component:ContactusComponent},
     { path: 'team', component:TeamComponent},
+    { path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({
