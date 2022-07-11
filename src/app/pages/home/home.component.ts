@@ -20,12 +20,19 @@ export class HomeComponent implements OnInit {
     //Suscribe: sirve para mostrar los datos y el parámetro any significa que puede ser cualquier tipo de estructura.
     this.ps.__getProjects().subscribe((rest: any) =>{
       this.projects = rest.data;
-      console.log(this.projects);
+      //console.log(this.projects);
     })
+  }
+
+  __obtenerProyectosBE(){
+    this.ps.__getProjects_be().subscribe((rest: any) =>{
+      console.log(rest);
+    })    
   }
 
   ngOnInit(): void {
     this.__obtenerProyectos();
+    this.__obtenerProyectosBE();
   }
 
 }

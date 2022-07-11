@@ -13,4 +13,8 @@ export class ProjectService {
   __getProjects(){
     return this.http.get('/api/project/GetProject');
   }
+
+  __getProjects_be(){
+    return this.http.get('https://localhost:44309/api/project/listar');
+  }
 }
