@@ -1,0 +1,48 @@
+<header *ngIf="project[0] != null" class="masthead" style="background-image: url('{{project[0].image}}');">
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-heading text-uppercase">
+                <span style="-webkit-text-stroke: 1px rgba(120,120,120,0.50);">
+                    ProYECTO<br>{{project[0].name}}
+                </span>
+            </div>
+            <a class="btn btn-primary border-dark btn-xl text-uppercase js-scroll-trigger" role="button" href="#portfolio" style="background-color: rgb(255,165,85);border:none;">
+                {{project[0].price}}
+            </a>
+        </div>
+    </div>
+</header>
+
+<section id="portfolio" class="bg-light" style="padding: 75px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-uppercase section-heading">DEPARTAMENTOS</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div *ngFor="let a of apartments" class="col-sm-6 col-md-4 portfolio-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
+                    </div><img class="img-fluid" src="{{ a.image[0].path }}"><a class="btn btn-primary border-dark text-uppercase" role="button" href="#portfolio" style="background-color: rgb(255,165,85);border: none;position: absolute;right: 5px;bottom: 5px;font-size: 12px;font-weight: bold;color: rgba(255,255,255,0.75);">Cotizar</a></a>
+                <div
+                    class="portfolio-caption">
+                    <h4>{{a.name}}</h4>
+                    <p class="text-muted"><strong><em>{{ a.price }} - {{ a.floor }}</em><br></strong></p>
+                    <p class="text-muted">{{ a.type }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="map-clean">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-uppercase text-center" style="margin-bottom: 25px;">Ubicación</h2>
+            <p class="text-center"><em>Av. Alcazar 538 - Miraflores<br></em></p>
+        </div>
+    </div>
+    <iframe class="bg-white d-block" allowfullscreen="" frameborder="0" width="100%" height="450" src="https://www.google.com/maps/embed/v1/place?q=Universidad%20Peruana%20de%20Ciencias%20Aplicadas&amp;key=AIzaSyA-mX5Z7eJL5GKASzo5gSNavXxX748a5Y4" style="padding: 20px;padding-top: 0;"></iframe>
+</div>
